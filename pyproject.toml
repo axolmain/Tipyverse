@@ -42,23 +42,17 @@ dependencies = [
     "statsmodels",
     "altair"
 ]
-
-[project.license]
-file = "LICENSE"
-
-[project.keywords]
 keywords = ["tidyverse", "R", "data science", "python"]
+license = {file = "LICENSE"}
 
 [project.optional-dependencies]
 notebook = ["swifter"]
 groupby = ["swifter"]
 
 [project.urls]
-homepage = "https://github.com/pypa/sampleproject"
-issues = "https://github.com/pypa/sampleproject/issues"
-
-[tool.setuptools.packages.find]
-exclude = ["tests", "docs"]
+Homepage = "https://github.com/axolmain/Tipyverse"
+Issues = "https://github.com/axolmain/Tipyverse/issues"
+Repository = "https://github.com/axolmain/Tipyverse.git"
 
 [tool.bdist_wheel]
 universal = true
