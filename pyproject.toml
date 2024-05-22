@@ -43,7 +43,7 @@ dependencies = [
     "altair"
 ]
 keywords = ["tidyverse", "R", "data science", "python"]
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 
 [project.optional-dependencies]
 notebook = ["swifter"]
@@ -58,7 +58,7 @@ Repository = "https://github.com/axolmain/Tipyverse.git"
 universal = true
 
 [tool.setuptools]
-packages = ["src/tipyverse"]
+packages = { find = { where = ["src"] } }
 
 [tool.pip-tools]
 allow-unsafe = true
