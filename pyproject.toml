@@ -56,3 +56,7 @@ Repository = "https://github.com/axolmain/Tipyverse.git"
 
 [tool.bdist_wheel]
 universal = true
+
+[tool.setuptools]
+packages = ["my_typiverse_axolmain"]
+package_dir = {"": "src"}
