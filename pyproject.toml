@@ -58,7 +58,7 @@ Repository = "https://github.com/axolmain/Tipyverse.git"
 universal = true
 
 [tool.setuptools]
-packages = ["my_typiverse_axolmain"]
+packages = ["tipyverse"]
 
 [tool.pip-tools]
 allow-unsafe = true
