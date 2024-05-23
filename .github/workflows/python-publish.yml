@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-    environment: pypi_publish
+    environment: pypi-publish
     runs-on: ubuntu-latest
 
     steps:
