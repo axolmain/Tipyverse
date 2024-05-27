@@ -1,6 +1,6 @@
 import polars as pl
 import pytest
-from src import select, filter, mutate, arrange, summarize, group_by, summarize_grouped
+from src.tipyverse import select, filter, mutate, arrange, summarize, group_by, summarize_grouped
 
 
 @pytest.fixture
