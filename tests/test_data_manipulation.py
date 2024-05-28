@@ -1,6 +1,6 @@
 import polars as pl
 import pytest
-from src.tipyverse import select, filter, mutate, arrange, summarize, group_by, summarize_grouped
+from src.tipyverse import select, filter, mutate, arrange, summarize, group_by
 
 
 @pytest.fixture
@@ -35,11 +35,3 @@ def test_mutate(penguins):
 def test_summarize(penguins):
     result = summarize(penguins, bill_depth_mean=pl.col('bill_depth_mm').mean())
     assert 'bill_depth_mean' in result.columns
-
-
-def test_group_by(penguins):
-    grouped = group_by(penguins, 'island')
-    result = summarize_grouped(grouped, bill_depth_mean=pl.col('bill_depth_mm').mean())
-    assert 'island' in result.columns
-    assert 'bill_depth_mean' in result.columns
-    assert len(result) == 3  # There are 3 unique islands

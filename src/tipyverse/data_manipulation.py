@@ -35,6 +35,10 @@ def group_by(df: pl.DataFrame, *columns):
     return df.groupby(list(columns))
 
 
-def summarize_grouped(df: pl.DataFrame, **kwargs):
+def summarize(self, **kwargs):
+    if not self.grouped:
+        raise ValueError("summarize() can only be called after group_by()")
     exprs = [func.alias(col) for col, func in kwargs.items()]
-    return df.agg(exprs)
+    self.df = self.df.agg(exprs)
+    self.grouped = False
+    return self
